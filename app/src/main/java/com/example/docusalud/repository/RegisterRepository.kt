@@ -1,13 +1,12 @@
 package com.example.docusalud.repository
 
-import android.util.Log
-import com.example.docusalud.data.UserRegister
+import com.example.docusalud.data.UserLoginAndRegister
 import com.example.docusalud.presentation.register.AuthState
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterRepository {
 
-    fun registerUser(userInfo: UserRegister): AuthState {
+    fun registerUser(userInfo: UserLoginAndRegister): AuthState {
        FirebaseAuth.getInstance().createUserWithEmailAndPassword(
            userInfo.email, userInfo.password)
            .addOnCompleteListener { task ->
@@ -17,7 +16,7 @@ class RegisterRepository {
                    AuthState.AuthError("Error")
                }
            }
-
+        return AuthState.AuthError("Error")
     }
 }
 
