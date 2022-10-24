@@ -1,4 +1,3 @@
 package com.example.docusalud.repository
 
-class LoginRepository {
-}
+class LoginRepository

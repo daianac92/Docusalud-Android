@@ -2,7 +2,7 @@ package com.example.docusalud.presentation.register
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -19,19 +19,19 @@ class RegisterActivity: AppCompatActivity() {
         RegisterViewModelFactory(this)
     })
 
-
-
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.d("DATO", "ACA ESTOY")
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setUpViews()
+
         setUpObservers()
+        setUpViews()
     }
 
     private fun setUpObservers() {
-       viewModel.authState.observe(this@RegisterActivity, Observer {
+        viewModel.authState.observe(this@RegisterActivity, Observer {
            when (it){
                AuthState.Success -> {navigateToHome()}
                is AuthState.AuthError -> {showError(it.message)}

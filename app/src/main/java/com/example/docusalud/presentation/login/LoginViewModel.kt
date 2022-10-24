@@ -1,12 +1,31 @@
 package com.example.docusalud.presentation.login
 
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.docusalud.data.UserLoginAndRegister
+import com.example.docusalud.data.UserLogin
+import com.example.docusalud.presentation.register.AuthState
 import com.example.docusalud.repository.LoginRepository
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginViewModel(val repository: LoginRepository): ViewModel() {
 
-    fun handleLoginUser(userInfo: UserLoginAndRegister){
+    private val _authState = MutableLiveData<AuthState>()
+    val authState: LiveData<AuthState> = _authState
 
+    fun handleLoginUser(userInfo: UserLogin) {
+        _authState.value = AuthState.Loading
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(userInfo.email, userInfo.password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    _authState.value = AuthState.Success
+                    Log.d("DATOOOOOO", "signInWithEmail:success")
+
+                } else {
+                    _authState.value = AuthState.AuthError("Error al iniciar sesión")
+                    Log.d("DATOOOOOO", "signInWithEmail:error")
+                }
+            }
     }
 }

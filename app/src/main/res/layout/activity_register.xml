@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/light_grey"
-    android:padding="40dp">
+    android:padding="40dp"
+    tools:context=".presentation.register.RegisterActivity">
 
     <ImageView
         android:id="@+id/icApp"
@@ -129,6 +130,7 @@
         android:id="@+id/progressBarRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

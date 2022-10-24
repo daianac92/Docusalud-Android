@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_grey"
-    android:padding="40dp">
+    android:padding="40dp"
+    tools:context=".presentation.login.LoginActivity">
 
 
     <ImageView
@@ -43,10 +44,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <EditText
-        android:id="@+id/etEmailRegister"
+        android:id="@+id/etEmailLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,14 +65,17 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailLogin" />
 
     <EditText
-        android:id="@+id/etPasswordRegister"
+        android:id="@+id/etPasswordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:inputType="textVisiblePassword"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPassword" />
@@ -83,16 +90,26 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLogin" />
 
-<Button
-    android:id="@+id/btn_login"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@id/tvRegister"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginTop="30dp"
-    android:text="Ingresar"
-    />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="Ingresar" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

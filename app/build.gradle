@@ -9,6 +9,9 @@ android {
     compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
     defaultConfig {
         applicationId "com.example.docusalud"
         minSdkVersion 16
@@ -54,10 +57,6 @@ dependencies {
 
     //Authentication
     implementation 'com.google.firebase:firebase-auth'
-}
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
