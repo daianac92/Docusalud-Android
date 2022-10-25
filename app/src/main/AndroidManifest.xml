@@ -13,6 +13,14 @@
         android:theme="@style/Theme.Docusalud">
 
         <activity
+            android:name=".presentation.HomeActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".presentation.patients.info.PteInfoActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".presentation.register.RegisterActivity"
             android:exported="true" />
 
