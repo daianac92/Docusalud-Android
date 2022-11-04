@@ -2,15 +2,16 @@ package com.example.docusalud.presentation.patients.list
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.docusalud.data.PtesInfo
 import com.example.docusalud.databinding.ActivityPtesListBinding
-import com.example.docusalud.presentation.HomeActivity
-import com.example.docusalud.presentation.patients.PatientsViewModel
-import com.example.docusalud.presentation.patients.PatientsViewModelFactory
+import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
+import com.example.docusalud.mvvm.factory.PatientsViewModelFactory
+import com.example.docusalud.presentation.patients.detail.PteDetailActivity
 import com.example.docusalud.presentation.patients.info.PteInfoActivity
 
 class PtesListActivity : AppCompatActivity(), OnPteClickListener {
@@ -46,6 +47,7 @@ class PtesListActivity : AppCompatActivity(), OnPteClickListener {
 
     private fun setObservers() {
         viewModel.ptesList.observe(this) {
+            Log.d("DATO", it.toString())
             ptesListAdapter.updateList(it)
         }
     }
@@ -66,6 +68,11 @@ class PtesListActivity : AppCompatActivity(), OnPteClickListener {
     }
 
     override fun onClick(pteInfo: PtesInfo) {
-        TODO("Not yet implemented")
+        val pteDetailActivity = Intent(this, PteDetailActivity::class.java).apply {
+            putExtra(PATIENTS_INFO, pteInfo)
+        }
+        startActivity(pteDetailActivity)
     }
 }
+
+const val PATIENTS_INFO = "Patients info"

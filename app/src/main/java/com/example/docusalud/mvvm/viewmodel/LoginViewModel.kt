@@ -1,4 +1,4 @@
-package com.example.docusalud.presentation.login
+package com.example.docusalud.mvvm.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.docusalud.data.UserLogin
 import com.example.docusalud.data.Users
-import com.example.docusalud.presentation.register.AuthState
 import com.example.docusalud.repository.LoginRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore

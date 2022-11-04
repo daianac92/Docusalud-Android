@@ -1,4 +1,4 @@
-package com.example.docusalud.presentation.register
+package com.example.docusalud.mvvm.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,10 +14,12 @@ class RegisterViewModel(private val repository: RegisterRepository): ViewModel()
     fun handleRegisterUser(userInfo: UserLoginAndRegister){
         _authState.value = AuthState.Loading
         when(repository.registerUser(userInfo)){
-            is AuthState.AuthError -> _authState.value = AuthState.AuthError(message = "Error al registrarse. Intente nuevamente")
+            is AuthState.AuthError -> _authState.value =
+                AuthState.AuthError(message = "Error al registrarse. Intente nuevamente")
             AuthState.Idle -> {}
             AuthState.Loading -> {}
-            AuthState.Success -> {_authState.value = AuthState.Success}
+            AuthState.Success -> {_authState.value = AuthState.Success
+            }
         }
     }
 

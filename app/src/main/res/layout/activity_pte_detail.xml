@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/iconPteDetail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_patient"
+        android:tint="?colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNamePteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Nombre y apellido"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/iconPteDetail" />
+
+    <TextView
+        android:id="@+id/tvDniPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="DNI"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamePteDetail" />
+
+    <TextView
+        android:id="@+id/tvFecNacPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Fecha de nacimiento"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDniPteDetail" />
+
+    <TextView
+        android:id="@+id/tvOSPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFecNacPteDetail"
+        tools:text="Obra Social" />
+
+    <TextView
+        android:id="@+id/tvOSNumberPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOSPteDetail"
+        app:layout_constraintTop_toBottomOf="@+id/tvFecNacPteDetail"
+        tools:text="Número" />
+
+    <TextView
+        android:id="@+id/tvOSSessionsLimitPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOSPteDetail"
+        tools:text="Sesiones disponibles:" />
+
+    <TextView
+        android:id="@+id/tvOSSessionsLimitNumberPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOSPteDetail"
+        app:layout_constraintTop_toBottomOf="@+id/tvOSNumberPteDetail"
+        tools:text="XX" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tvOSSessionsLimitPteDetail"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:id="@+id/tvHCPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/divider1"
+        tools:text="Historia clinica" />
+
+    <ImageView
+        android:id="@+id/icSeeHCPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        app:layout_constraintEnd_toStartOf="@id/icEditHCPteDetail"
+        android:src="@drawable/ic_see"
+        android:tint="?colorSecondary"
+        />
+
+    <ImageView
+        android:id="@+id/icEditHCPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        android:src="@drawable/ic_edit"
+        android:tint="?colorSecondary"
+        />
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHCPteDetail"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:id="@+id/tvSessionsPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/divider2"
+        tools:text="Sesiones" />
+
+    <ImageView
+        android:id="@+id/icSeeSessionsPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        app:layout_constraintEnd_toStartOf="@id/icEditSessionsPteDetail"
+        android:src="@drawable/ic_see"
+        android:tint="?colorSecondary"
+        />
+
+    <ImageView
+        android:id="@+id/icEditSessionsPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toStartOf="@id/icAddSessionsPteDetail"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        android:src="@drawable/ic_edit"
+        android:tint="?colorSecondary"
+        />
+
+    <ImageView
+        android:id="@+id/icAddSessionsPteDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_add_no_background"
+        android:tint="?colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

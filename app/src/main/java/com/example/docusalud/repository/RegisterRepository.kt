@@ -1,7 +1,7 @@
 package com.example.docusalud.repository
 
 import com.example.docusalud.data.UserLoginAndRegister
-import com.example.docusalud.presentation.register.AuthState
+import com.example.docusalud.mvvm.viewmodel.AuthState
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterRepository {

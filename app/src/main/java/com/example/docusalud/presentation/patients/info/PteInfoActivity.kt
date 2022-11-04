@@ -1,13 +1,13 @@
 package com.example.docusalud.presentation.patients.info
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.docusalud.data.PtesInfo
 import com.example.docusalud.databinding.ActivityPtesInfoBinding
-import com.example.docusalud.presentation.login.LoginViewModelFactory
-import com.example.docusalud.presentation.patients.PatientsViewModel
-import com.example.docusalud.presentation.patients.PatientsViewModelFactory
+import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
+import com.example.docusalud.mvvm.factory.PatientsViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 
 class PteInfoActivity : AppCompatActivity() {
@@ -30,7 +30,6 @@ class PteInfoActivity : AppCompatActivity() {
         binding.btnSubmitPatient.setOnClickListener {
             val pteInfoMOCK = PtesInfo("Juan", "Perez", "23222111", "12/03/1992",
             "Caja Forense","ac336", 30, "Marcela Gonzalez")
-
 
             val pteInfo = PtesInfo(
                 name = binding.etName.text.toString(),

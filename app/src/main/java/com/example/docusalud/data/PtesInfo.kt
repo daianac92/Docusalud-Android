@@ -9,4 +9,4 @@ data class PtesInfo(
     val osNumber: String = "",
     val osSessionsLimit: Int = 0,
     val tutorInfo: String = ""
-)
+): java.io.Serializable

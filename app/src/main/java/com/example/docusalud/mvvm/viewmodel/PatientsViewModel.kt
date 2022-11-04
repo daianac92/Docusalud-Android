@@ -1,10 +1,11 @@
-package com.example.docusalud.presentation.patients
+package com.example.docusalud.mvvm.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.docusalud.data.PtesInfo
+import com.example.docusalud.presentation.patients.PatientsRepository
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
