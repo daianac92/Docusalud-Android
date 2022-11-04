@@ -29,7 +29,7 @@ class PteDetailActivity: AppCompatActivity() {
 
     private fun setUpViews() {
         with(binding){
-            tvNamePteDetail.text = "${pteItem.name}+${pteItem.lastName}"
+            tvNamePteDetail.text = "${pteItem.name} ${pteItem.lastName}"
             tvDniPteDetail.text = pteItem.dni
             tvFecNacPteDetail.text = pteItem.fecNac
             tvOSPteDetail.text = pteItem.os

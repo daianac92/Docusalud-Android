@@ -79,7 +79,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOSPteDetail"
-        tools:text="Sesiones disponibles:" />
+        android:text="Sesiones disponibles:" />
 
     <TextView
         android:id="@+id/tvOSSessionsLimitNumberPteDetail"
@@ -108,7 +108,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/divider1"
-        tools:text="Historia clinica" />
+        android:text="Historia clinica" />
 
     <ImageView
         android:id="@+id/icSeeHCPteDetail"
@@ -149,7 +149,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/divider2"
-        tools:text="Sesiones" />
+        android:text="Sesiones" />
 
     <ImageView
         android:id="@+id/icSeeSessionsPteDetail"
