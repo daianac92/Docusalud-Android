@@ -3,4 +3,16 @@
     <string name="app_title">DOCUSALUD</string>
     <string name="email_title_login">Email</string>
     <string name="password_title_login">Contraseña</string>
+    <string name="title_pte_info">Datos Paciente</string>
+    <string name="tvName">Nombre/s</string>
+    <string name="tvLastName">Apellido/s</string>
+    <string name="tvDNI">Número de documento</string>
+    <string name="tvDNIhint">Sin puntos ni espacios</string>
+    <string name="tvFecNac">Fecha de nacimiento</string>
+    <string name="etFecNacHint">DD/MM/AAAA</string>
+    <string name="tvOS">Obra Social</string>
+    <string name="tvOSnumber">Número de afiliado</string>
+    <string name="tvSessionLimit">Límite de sesiones</string>
+    <string name="tvTutorData">Nombre y apellido Tutor</string>
+    <string name="btnSend">Enviar</string>
 </resources>

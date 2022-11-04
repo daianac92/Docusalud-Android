@@ -13,12 +13,35 @@
         android:theme="@style/Theme.Docusalud">
 
         <activity
+            android:name=".presentation.patients.detail.PteDetailActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".presentation.patients.hc.HCActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".presentation.patients.list.PtesListActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".presentation.HomeActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".presentation.patients.info.PteInfoActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".presentation.register.RegisterActivity"
             android:exported="true" />
 
         <activity
             android:name=".presentation.login.LoginActivity"
             android:exported="true" />
+
+
+
 
         <activity
             android:name=".MainActivity"

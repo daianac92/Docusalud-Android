@@ -10,6 +10,9 @@ import androidx.lifecycle.Observer
 import com.example.docusalud.MainActivity
 import com.example.docusalud.data.UserLoginAndRegister
 import com.example.docusalud.databinding.ActivityRegisterBinding
+import com.example.docusalud.mvvm.viewmodel.AuthState
+import com.example.docusalud.mvvm.viewmodel.RegisterViewModel
+import com.example.docusalud.mvvm.factory.RegisterViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 
 class RegisterActivity: AppCompatActivity() {

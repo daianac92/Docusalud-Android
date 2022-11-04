@@ -1,8 +1,9 @@
-package com.example.docusalud.presentation.login
+package com.example.docusalud.mvvm.factory
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.docusalud.mvvm.viewmodel.LoginViewModel
 import com.example.docusalud.repository.LoginRepository
 
 class LoginViewModelFactory constructor(

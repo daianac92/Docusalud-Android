@@ -1,9 +1,9 @@
-package com.example.docusalud.presentation.register
+package com.example.docusalud.mvvm.factory
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.docusalud.presentation.login.LoginViewModel
+import com.example.docusalud.mvvm.viewmodel.RegisterViewModel
 import com.example.docusalud.repository.RegisterRepository
 
 class RegisterViewModelFactory constructor(
