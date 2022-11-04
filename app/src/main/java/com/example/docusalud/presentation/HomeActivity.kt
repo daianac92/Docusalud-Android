@@ -4,8 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.docusalud.databinding.ActivityHomeBinding
-import com.example.docusalud.presentation.patients.info.PteInfoActivity
-import com.example.docusalud.presentation.register.RegisterActivity
+import com.example.docusalud.presentation.patients.list.PtesListActivity
 
 class HomeActivity: AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -21,8 +20,8 @@ class HomeActivity: AppCompatActivity() {
 
     private fun setUpViews() {
         binding.itemPatient.setOnClickListener {
-            val pteInfoActivity = Intent(this, PteInfoActivity::class.java)
-            startActivity(pteInfoActivity)
+            val ptesListActivity = Intent(this, PtesListActivity::class.java)
+            startActivity(ptesListActivity)
         }
     }
 
