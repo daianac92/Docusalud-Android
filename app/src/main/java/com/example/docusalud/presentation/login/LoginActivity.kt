@@ -9,10 +9,10 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.example.docusalud.data.UserLogin
 import com.example.docusalud.databinding.ActivityLoginBinding
-import com.example.docusalud.presentation.HomeActivity
+import com.example.docusalud.mvvm.factory.LoginViewModelFactory
 import com.example.docusalud.mvvm.viewmodel.AuthState
 import com.example.docusalud.mvvm.viewmodel.LoginViewModel
-import com.example.docusalud.mvvm.factory.LoginViewModelFactory
+import com.example.docusalud.presentation.HomeActivity
 import com.example.docusalud.presentation.register.RegisterActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -49,6 +49,7 @@ class LoginActivity: AppCompatActivity() {
         }
     }
 
+    /**This function validates the user input and call login service in viewmodel**/
     private fun validateDataAndLogin(userInfo: UserLogin) {
 
         if ((userInfo.email).isEmpty() ||
