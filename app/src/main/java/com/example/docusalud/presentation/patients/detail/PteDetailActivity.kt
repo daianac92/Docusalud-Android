@@ -4,12 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.docusalud.Utils.IS_EDITABLE
+import com.example.docusalud.Utils.PATIENTS_INFO
+import com.example.docusalud.Utils.PATIENT_DNI
 import com.example.docusalud.data.PtesInfo
 import com.example.docusalud.databinding.ActivityPteDetailBinding
-import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
 import com.example.docusalud.mvvm.factory.PatientsViewModelFactory
+import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
 import com.example.docusalud.presentation.patients.hc.HCActivity
-import com.example.docusalud.presentation.patients.list.PATIENTS_INFO
 
 class PteDetailActivity: AppCompatActivity() {
     private lateinit var binding: ActivityPteDetailBinding
@@ -65,11 +67,10 @@ class PteDetailActivity: AppCompatActivity() {
     private fun navigateToEditHC() {
         val hCActivity = Intent(this, HCActivity::class.java).apply {
             putExtra(IS_EDITABLE, true)
+            putExtra(PATIENT_DNI, pteItem.dni)
         }
         startActivity(hCActivity)
     }
 
 
 }
-
-const val IS_EDITABLE = "is_editable"

@@ -15,4 +15,14 @@
     <string name="tvSessionLimit">Límite de sesiones</string>
     <string name="tvTutorData">Nombre y apellido Tutor</string>
     <string name="btnSend">Enviar</string>
+    <string name="pteAntTitle">Antecedentes personales</string>
+    <string name="pte_ant_family">Composición grupo familiar</string>
+    <string name="pte_ant_prenatal">Antecedentes pre-natales</string>
+    <string name="pte_ant_postnatal">Antecedentes Post-natales</string>
+    <string name="pte_ant_health">Condiciones de salud</string>
+    <string name="pte_ant_family_relationship">Relaciones familiares</string>
+    <string name="pte_ant_obs">Observaciones</string>
+    <string name="hint_date">DD/MM/AAAA</string>
+    <string name="pte_ant_date">Fecha última actualización</string>
+    <string name="pte_ant_school">Información escolar</string>
 </resources>

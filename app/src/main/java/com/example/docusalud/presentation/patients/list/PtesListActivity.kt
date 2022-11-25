@@ -7,10 +7,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.docusalud.Utils.PATIENTS_INFO
 import com.example.docusalud.data.PtesInfo
 import com.example.docusalud.databinding.ActivityPtesListBinding
-import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
 import com.example.docusalud.mvvm.factory.PatientsViewModelFactory
+import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
 import com.example.docusalud.presentation.patients.detail.PteDetailActivity
 import com.example.docusalud.presentation.patients.info.PteInfoActivity
 
@@ -75,4 +76,3 @@ class PtesListActivity : AppCompatActivity(), OnPteClickListener {
     }
 }
 
-const val PATIENTS_INFO = "Patients info"
