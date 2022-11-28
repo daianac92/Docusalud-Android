@@ -60,6 +60,7 @@ class PteDetailActivity: AppCompatActivity() {
     private fun navigateToSeeHc() {
         val hCActivity = Intent(this, HCActivity::class.java).apply {
             putExtra(IS_EDITABLE, false)
+            putExtra(PATIENT_DNI, pteItem.dni)
         }
         startActivity(hCActivity)
     }

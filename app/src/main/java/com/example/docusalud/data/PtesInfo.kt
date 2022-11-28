@@ -7,6 +7,6 @@ data class PtesInfo(
     val fecNac: String = "",
     val os: String = "",
     val osNumber: String = "",
-    val osSessionsLimit: Int = 0,
+    val osSessionsLimit: String = "",
     val tutorInfo: String = ""
 ): java.io.Serializable

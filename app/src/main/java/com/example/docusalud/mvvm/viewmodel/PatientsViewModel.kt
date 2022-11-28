@@ -15,7 +15,8 @@ import kotlinx.coroutines.launch
 class PatientsViewModel(repository: PatientsRepository) : ViewModel() {
 
     private val db = Firebase.firestore
-    private val patientTable = db.collection("users").document("36005282").collection("patients")
+    private val patientsDataTable =
+        db.collection("users").document("36005282").collection("patientsDataTable")
     private val _ptesList = MutableLiveData<List<PtesInfo>>()
     val ptesList: LiveData<List<PtesInfo>>
         get() = _ptesList
@@ -26,7 +27,7 @@ class PatientsViewModel(repository: PatientsRepository) : ViewModel() {
 
     fun submitPatient(pteInfo: PtesInfo) {
         CoroutineScope(Dispatchers.IO).launch {
-                patientTable
+            patientsDataTable
                     .document(pteInfo.dni)
                     .set(pteInfo)
                     .addOnSuccessListener {
@@ -42,7 +43,7 @@ class PatientsViewModel(repository: PatientsRepository) : ViewModel() {
 
     fun getPatients() {
         CoroutineScope(Dispatchers.IO).launch {
-            patientTable.get()
+            patientsDataTable.get()
                 .addOnSuccessListener { results ->
                     _ptesList.postValue(results.toObjects(PtesInfo::class.java))
                 }

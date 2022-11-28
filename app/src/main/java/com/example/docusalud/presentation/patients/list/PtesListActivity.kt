@@ -13,7 +13,7 @@ import com.example.docusalud.databinding.ActivityPtesListBinding
 import com.example.docusalud.mvvm.factory.PatientsViewModelFactory
 import com.example.docusalud.mvvm.viewmodel.PatientsViewModel
 import com.example.docusalud.presentation.patients.detail.PteDetailActivity
-import com.example.docusalud.presentation.patients.info.PteInfoActivity
+import com.example.docusalud.presentation.patients.info.PtePersonalData
 
 class PtesListActivity : AppCompatActivity(), OnPteClickListener {
     private lateinit var binding: ActivityPtesListBinding
@@ -42,7 +42,7 @@ class PtesListActivity : AppCompatActivity(), OnPteClickListener {
     }
 
     private fun navigateToPteInfoActivity() {
-        val pteInfoActivity = Intent(this, PteInfoActivity::class.java)
+        val pteInfoActivity = Intent(this, PtePersonalData::class.java)
         startActivity(pteInfoActivity)
     }
 

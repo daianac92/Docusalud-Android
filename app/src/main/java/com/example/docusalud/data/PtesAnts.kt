@@ -1,6 +1,7 @@
 package com.example.docusalud.data
 
 data class PtesAnts(
+    val dni: String = "",
     val family: String = "",
     val preNat: String = "",
     val postNat: String = "",
